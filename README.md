@@ -14,56 +14,56 @@ it works if you don't screw up the syntax
 
 you can access fields of the data object, or any loop variable
 
-> hello, @name@!
+    hello, @name@!
 
 together with data
 
-> new Archangel() { name = "metatron" }
+    new Archangel() { name = "metatron" }
 
 becomes
 
-> hello, metatron!
+    hello, metatron!
 
 ##loops
 
 you can loop through any IEnumerable
 
-> @archangel:archangels@hello, @archangel.name@!
-> $
+    @archangel:archangels@hello, @archangel.name@!
+    $
 
 with data
 
-> new Archangels() {
->   archangels = new[] {
->     new Archangel() { name = "metatron" },
->     new Archangel() { name = "samael" },
->     new Archangel() { name = "azrael" }
->   }
-> }
+    new Archangels() {
+      archangels = new[] {
+        new Archangel() { name = "metatron" },
+        new Archangel() { name = "samael" },
+        new Archangel() { name = "azrael" }
+      }
+    }
 
 becomes
 
-> hello, metatron!
-> hello, samael!
-> hello, azrael!
-> 
+    hello, metatron!
+    hello, samael!
+    hello, azrael!
+    
 
 ##separators
 
 you can insert text on every loop iteration except the last. good for commas and such.
 
-> greetings: @archangel:archangels@@archangel.name@?, $$.
+    greetings: @archangel:archangels@@archangel.name@?, $$.
 
 with data
 
-> new Archangels() {
->   archangels = new[] {
->     new Archangel() { name = "metatron" },
->     new Archangel() { name = "samael" },
->     new Archangel() { name = "azrael" }
->   }
-> }
+    new Archangels() {
+      archangels = new[] {
+        new Archangel() { name = "metatron" },
+        new Archangel() { name = "samael" },
+        new Archangel() { name = "azrael" }
+      }
+    }
 
 becomes
 
-> greetings: metatron, samael, azrael.
+    greetings: metatron, samael, azrael.
