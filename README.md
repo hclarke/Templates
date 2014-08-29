@@ -2,12 +2,15 @@ Templates
 =========
 
 templete system for C#
+
 it works if you don't screw up the syntax
 
 ##syntax
 
 '@' surrounds variables and loops
+
 '?' starts a separator
+
 '$' closes loops and separators
 
 ##variables
