@@ -1,0 +1,12 @@
+public struct Vector@dim@ {
+	@comp:components@
+	public @baseType@ @comp@;$
+	
+	public Vector@dim@(@comp:components@@baseType@ @comp@?, $$) {
+@comp:components@		this.@comp@ = @comp@;
+$	}
+	@op:operators@
+	public static Vector@dim@ operator @op@(Vector@dim@ a, Vector@dim@ b) {
+		return new Vector@dim@(@comp:components@a.@comp@ @op@ b.@comp@?, $$);
+	}$
+}
